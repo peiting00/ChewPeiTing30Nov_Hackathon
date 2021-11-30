@@ -16,6 +16,15 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        ThemePark tp = new ThemePark();
+        
+        VisitorThread vt = new VisitorThread(tp);
+       
+        
+            vt.start();
+        
+        
     }
     
 }
