@@ -22,10 +22,11 @@ public class VisitorThread extends Thread {
             for(int i=0; i <80 ;i++){
                 Thread.sleep(100);
                 tp.QueueForTicket();
-                tp.PassEntranceGate();
+                int opt3 = (int)((Math.random()*10)+1);
+                tp.PassEntranceGate(opt3);
                  int opt = (int)((Math.random()*2)+1);
                 tp.waterslides(opt);
-                    int opt2 = (int)((Math.random()*10)+1);
+                    int opt2 = (int)((Math.random()*2)+1);
                 tp.Left(opt2);
             }
             

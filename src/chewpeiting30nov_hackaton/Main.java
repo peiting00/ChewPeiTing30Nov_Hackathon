@@ -20,7 +20,6 @@ public class Main {
         ThemePark tp = new ThemePark();
         
         VisitorThread vt = new VisitorThread(tp);
-       
         
             vt.start();
         

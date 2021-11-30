@@ -21,14 +21,14 @@ public class ThemePark {
         System.out.println("Visitor queuing for ticket....");
     }
     
-    public synchronized void PassEntranceGate() throws InterruptedException{
+    public synchronized void PassEntranceGate(int num) throws InterruptedException{
         while(visitor > 75){
             System.out.println("!! Max 75visitors only. Visitor waiting to enter... !!");
             wait();
         }
         
-        System.out.println("Visitor enter the Water Park..");
-        visitor++;
+        System.out.println(num+" visitor enter the Water Park..");
+        visitor = visitor+num;
         notify();
     }
     
@@ -48,6 +48,7 @@ public class ThemePark {
         System.out.println(left+ " visitor Leaving Theme Park.....");
         System.out.println(left+" of visitor are allowed to enter.");
         visitor = visitor - left;
+        notify();
     }
     
 }
